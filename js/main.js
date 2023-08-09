@@ -2,15 +2,16 @@ const loadData = async() => {
       const url = `https://openapi.programming-hero.com/api/ai/tools`
       const res = await fetch(url)
       const data = await res.json();
-      displayData(data.data.tools);
+      displayData(data.data.tools.slice(0, 6));
 }
 
 const displayData = (datas) => {
       console.log(datas);
       
       const cardContainer = document.getElementById('cardContainer');
-      const insideId = document.getElementById('insideId');
-      datas.slice(0, 6).forEach(data => {
+      cardContainer.innerHTML = '';
+      // const insideId = document.getElementById('insideId');
+      datas.forEach(data => {
             console.log(data);
 
             const cardDiv = document.createElement('cardDiv');
@@ -46,4 +47,12 @@ const displayData = (datas) => {
       });
 }
 
+
 loadData();
+
+const loadMoreBtn = async() => {
+      const url = `https://openapi.programming-hero.com/api/ai/tools`
+      const res = await fetch(url)
+      const data = await res.json();
+      displayData(data.data.tools);
+}
