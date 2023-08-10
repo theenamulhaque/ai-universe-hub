@@ -12,3 +12,15 @@ body{
       font-size: 13px;
       border-radius: 5px;
 }
+
+.arrowBtn {
+      background-color: rgba(255, 68, 0, 0.185);
+      color: orangered;
+      border: none;
+}
+
+.arrowBtn:hover {
+      background-color: orangered;
+      color: #fff;
+      border: none;
+}

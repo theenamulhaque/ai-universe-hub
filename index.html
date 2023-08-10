@@ -1,12 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- css link -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   </head>
   <body>
     <header class="text-center fw-bold">
@@ -15,21 +21,33 @@
 
     <main class="container mt-4">
       <div class="sortBtn text-center">
-            <div class="btn btn-lg btn-danger btnColor">Sort By Date</div>
+        <div class="btn btn-lg btn-danger btnColor">Sort By Date</div>
       </div>
 
       <section class="mt-5">
-            <div id="cardContainer" class="row row-cols-1 row-cols-md-3 g-4">
+        <div id="cardContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
 
+        <!-- Spinner start-->
+        <section id="spinner" class="d-none">
+          <div class="text-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
+          </div>
+        </section>
+        <!-- spinner end -->
 
-            <div class="sortBtn text-center mt-5 mb-3">
-              <div onclick="loadMoreBtn()" class="btn btn-lg btn-danger btnColor">Load More</div>
-            </div>
+        <div class="sortBtn text-center mt-5 mb-3">
+          <div onclick="loadMoreBtn()" class="btn btn-lg btn-danger btnColor">
+            Load More
+          </div>
+        </div>
       </section>
     </main>
 
     <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- fontawesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
   </body>
 </html>
